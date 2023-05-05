@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/presentation/photos/viewModel/photos_view_model.dart';
+import 'package:flutter_clean_architecture/presentation/photos/viewModel/photos_controller.dart';
 import 'package:get/get.dart';
 
-class PhotosView extends GetView<PhotosViewModel> {
+class PhotosView extends GetView<PhotosController> {
   const PhotosView({Key? key}) : super(key: key);
 
   @override

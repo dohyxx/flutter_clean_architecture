@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/presentation/commons/utils/util_colors.dart';
 import 'package:flutter_clean_architecture/presentation/photos/view/photos_view.dart';
-import 'package:flutter_clean_architecture/presentation/photos/viewModel/photos_view_model.dart';
+import 'package:flutter_clean_architecture/presentation/photos/viewModel/photos_controller.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           fontFamily: 'NotoSans',
       ),
-      initialBinding: BindingsBuilder.put(() => PhotosViewModel()),
+      initialBinding: BindingsBuilder.put(() => PhotosController()),
       home: const PhotosView(),
     );
   }
