@@ -3,11 +3,13 @@ class SearchImageModel {
   final int totalCount;
   final int pageableCount;
   final bool isEnd;
+  final List<ImageDocument> document;
 
   SearchImageModel({
     required this.totalCount,
     required this.pageableCount,
     required this.isEnd,
+    required this.document,
   });
 
   factory SearchImageModel.fromJson(Map<String, dynamic> json) {
@@ -21,6 +23,7 @@ class SearchImageModel {
       totalCount: json['meta']['total_count'],
       pageableCount: json['meta']['pageable_count'],
       isEnd: json['meta']['is_end'],
+      document: document,
     );
   }
 }
