@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:get/get.dart' as gets;
 import 'package:http/http.dart';
 
@@ -17,7 +16,6 @@ class ApiRequest {
     Map<String, String>? headers,
     Map<String, dynamic>? params,
   }) async {
-    gets.Get.log('[ApiRequest.call: $method, $url, ${params ?? '검색어 없음'}]');
     final httpResponse = await _requestHttp(method, url, headers, params);
     final response = ApiResponse.fromHttpResponse(httpResponse);
 

@@ -43,6 +43,7 @@ class ApiClient {
     );
 
     if (result.statusCode == 200) {
+      //print('ApiClient: ${result.statusCode} ');
       return SearchImageModel.fromJson(result.body);
     } else {
       throw PlatformException(

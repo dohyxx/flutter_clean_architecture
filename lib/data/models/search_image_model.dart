@@ -13,7 +13,7 @@ class SearchImageModel {
   });
 
   factory SearchImageModel.fromJson(Map<String, dynamic> json) {
-    final jsonDocument = json['document'] as List;
+    final jsonDocument = json['documents'] as List;
     final document = <ImageDocument>[];
     for (var jsonDocument in jsonDocument) {
       document.add(ImageDocument.fromJson(jsonDocument));
